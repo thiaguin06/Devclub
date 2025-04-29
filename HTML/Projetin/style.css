@@ -1,0 +1,51 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+ background: url(./pp.jpg);
+ background-size: cover;
+    
+}
+
+section{
+display: inline-block;
+    
+}
+header{
+    background-color: #1a171788;
+    color: rgb(245, 245, 240);
+    
+
+}
+a{                                                                          
+    text-decoration: none;
+    color: antiquewhite;
+    padding: 20px;
+    
+}
+button{
+    border-radius: 6px;
+    border:  1px solid #2d468a;
+    height: 20px;
+    width: 112px;
+    height: 27px;
+    top: 707px;
+    left: 801px;
+}
+a:visited{
+    color: #2d468a;
+}
+a:hover{
+    color:rgb(213, 231, 236) ;
+}
+p{
+    color: rgb(218, 228, 238);
+   
+}
+img{
+    width: 300px;
+   padding: 20px;
+}

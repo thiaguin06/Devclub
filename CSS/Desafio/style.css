@@ -1,0 +1,55 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+h1{
+    font-family: Montserrat;
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: rgb(22, 22, 68);
+   
+
+}
+section {
+    display: inline-block;
+}
+p{
+    color: #4B505A;
+    width: 493px;
+    height: 99px;
+    top: 553px;
+    left: 801px;
+
+}
+header,a{
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    margin: 10px;
+
+}
+button{
+    border-radius: 6px;
+    border: 1px solid chartreuse;
+    background-color: chartreuse;
+    width: 124px;
+    height: 45px;
+    top: 32px;
+    left: 420px;
+    border-radius: 5px;
+
+}
+.btn{
+    background-color: aliceblue;
+    width: 112px;
+    height: 27px;
+    top: 707px;
+    left: 801px;
+    color:chartreuse;
+    
+  
+}

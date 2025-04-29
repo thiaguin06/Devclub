@@ -1,0 +1,20 @@
+@charset "UTF-8";
+h1{
+    color: #b12424;
+}
+h2{
+    color: #279235;
+}
+p{
+    color: #88184c;
+}
+ul{
+    color: aquamarine;
+}
+img{
+
+    width: 900px;
+   border-radius: 50px;
+    height: 60px;
+}
+  

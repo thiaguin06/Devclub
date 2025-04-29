@@ -1,0 +1,75 @@
+@charset "UTF-8";
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+header,a{
+    color: dimgrey;
+    text-decoration: none;
+    
+    margin: 20px 10px; 
+    padding: 4px;
+}
+button{
+
+    background-color: #554fb4c4;
+    width: 70px;
+    border-radius: 27px;
+    border:none;
+    color: rgb(234, 241, 234);
+   
+}
+.bitn{
+    background: #ADFF00;
+    color: black;
+    width: 150px;
+    height: 30px
+   
+}
+section {
+    font-family: Montserrat;
+    display: inline-block;
+      
+}
+h1{
+    font-family: Montserrat;
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 100%;
+    letter-spacing: 0%;
+     
+}
+h2{
+    color: #515151;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    
+}
+p{
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+}
+.img{
+    margin-left: 125px;
+    width: 354px;
+    height:317px;
+    top: -1218px;
+    left: -1717px;
+}   
+
+.img{
+    margin-left: 125px;
+    width: 354px;
+    height:317px;
+    top: -1218px;
+    left: -1717px;
+}   
