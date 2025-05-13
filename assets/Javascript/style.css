@@ -1,0 +1,19 @@
+@charset "UTF-8";
+ *{
+    margin: 0px;
+    padding: 0px
+ }
+ body{
+    background-color: rgba(119, 39, 194, 0.836);
+ }
+ img{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height: 170px;
+    
+ }
+ main{
+    margin-left: auto;
+    margin-right: auto;
+ }
