@@ -1,16 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Conversor de Moeda</title>
 </head>
-<body> 
-    <main>
-    <h4 id="real">Converte para <br>R$ Real brasileiro</h4>
-    <h4 id="euro">Converte para <br> Euro</h4>
-   <img src="../Javascript/imagem/dinheiro.gif" alt="imagem">
-   </main>
+<body>
+  <img class="dinheiro" src="../Javascript/imagem/dinheiro.gif" alt="imagem" />
+
+  <main>
+    <label>
+      Converter <b>de</b>
+      <select>
+        <option value="real">R$ Real brasileiro</option>
+      </select>
+    </label>
+
+    <label>
+      Converter <b>para</b>
+      <select class="currency-select">
+        <option value="dolar">US$ Dólar americano</option>
+        <option value="euro">€ Euro</option>
+      </select>
+    </label>
+
+    <label>
+      Valor
+      <input type="number" class="input-currency" placeholder="10000" />
+    </label>
+
+    <button class="convert-button">Converter</button>
+
+    <section>
+      <div>
+        <img src="../Javascript/imagem/brasil.png" alt="imagem-brasil" id="brasil" />
+        <p class="nota">Real</p>
+        <p class="currency-value-to-convert">R$ 0.0</p>
+      </div>
+
+      <img src="../Javascript/imagem/seta.png" alt="seta" id="seta" />
+
+      <div>
+        <img class="currencyImg" src="../Javascript/imagem/eua.png" alt="imagem-eua" id="eua" />
+        <p class="nota" id="currency-name">Dólar americano</p>
+        <p class="currency-value">US$ 0.0</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="pjt.js"></script>
 </body>
 </html>
+
