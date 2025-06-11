@@ -12,25 +12,25 @@ if(senhadaconta|| senha2 || senha3){
     console.log('senha inválida')
 } */
 
-/*estudando operadores  */
-
-/*const temp = 30
+    /*estudando operadores  */
+ 
+ /*const temp = 30
 if(temp === 10){
-   console.log('quente')
+    console.log('quente')
 }else if(temp === 10){
-   console.log('normal')
+    console.log('normal')
 }else{
-   console.log('frio')
+    console.log('frio')
 }  */
 
 /* operador ternario*/
 // const sal = 2000
-//sal >= 1000 ? console.log('salario alto') : console.log('salario baixo')
-// if no ternario sal >= 1000 ? console.log('salario alto') ?
-//if/else no ternario sal < 1000 ? console.log('salario alto') : console.log('salario muito bom')?
-// else if no ternario sal < 1000 ? console.log('salario alto') : sal >= 1000 ? console.log('salario alto') : console.log('salario doido?')?
+ //sal >= 1000 ? console.log('salario alto') : console.log('salario baixo')
+ // if no ternario sal >= 1000 ? console.log('salario alto') ?
+ //if/else no ternario sal < 1000 ? console.log('salario alto') : console.log('salario muito bom')?
+ // else if no ternario sal < 1000 ? console.log('salario alto') : sal >= 1000 ? console.log('salario alto') : console.log('salario doido?')?
 
-// switch case controlador de fluxo e quase a mesma coisa de if/else so que ele controla um pouco mais e as coisas tem que ta certinho
+ // switch case controlador de fluxo e quase a mesma coisa de if/else so que ele controla um pouco mais e as coisas tem que ta certinho
 /*const temperatura = 20
 switch(temperatura){
     case 40:        
@@ -48,12 +48,7 @@ switch(temperatura){
 } */
 //setimeout executa uma vez
 // & setlnterval executa infinita vezes
-//clearinterval para parar o setinterval ai voce tem que coloca a variavel que vc criou no setInterval
 
-/*setInterval(() => {
-    console.log('ola')
-}, 1000) */
-
-setTimeout(() => {
+setInterval(() => {
     console.log('ola')
 }, 1000)
