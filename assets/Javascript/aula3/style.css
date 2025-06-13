@@ -1,0 +1,26 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+
+}
+input{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    border: 1px solid #ac5866;
+}
+button{
+    padding: 10px;
+    width: 100px;
+    border-radius: 5px;
+    border: 1px solid #ac5866;
+    cursor: pointer;
+    background-color: #ac5866;
+    color: #fff
+}
