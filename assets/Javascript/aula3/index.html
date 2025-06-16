@@ -38,19 +38,47 @@
             {
                 nome: 'lucas',
                 telefone: '38999999999'
-            }
+            },
+             {
+                nome: 'rafael',
+                telefone: '38998776754'
+             },
+              {
+                nome: 'gabriel',
+                telefone: '38998776754'
+              }, 
+              {
+                nome: 'jaime',
+                telefone: '38998776754'
+              }, 
+              {
+                nome:'pe de porco',
+                telefone: '38998776754'
+              },
+              {
+                nome:'ana rosa',
+                telefone: '38998776754'
+              }
         ]
 
-        function procurar() {
-     for (const i of nomes) {
-         if (i.nome.toLowerCase() === input.value.toLowerCase()) {
-             p.textContent = `Contato encontrado  ${i.nome}: ${i.telefone}🤳` ;
-             break;
-         } else {
-             p.textContent = 'Contato não encontrado, tente novamente.😢';
+
+       function procurar() {
+         for (const element of nomes) {
+            if(input.value.toLowerCase() == element.nome.toLowerCase()){
+                p.innerHTML = `Telefone de ${element.nome}: ${element.telefone}`;
+                break
+
+            } else{
+                p.innerHTML = `nome não encontrado`;
+            }
+           
          }
-     }
-    }
+        }
+
+
+
+
+
 
         /*let nomeDigitado = input.value.trim().toLowerCase(); //A função trim() em JavaScript remove os espaços em branco do início e do fim de uma string.
          let contato = nomes.find(c => c.nome.toLowerCase() === nomeDigitado); //A função toLowerCase() em JavaScript converte todas as letras de uma string para minúsculas.
