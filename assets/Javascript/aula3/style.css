@@ -6,21 +6,51 @@
 }
 body{
     font-family: Arial, sans-serif;
+    background: url(foto.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
 
+}
+h1{
+    text-align: center;
+    color: #fff;
 }
 input{
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
     margin-bottom: 10px;
-    border: 1px solid #ac5866;
+    border: 1px solid #0f0d0e;
 }
 button{
     padding: 10px;
     width: 100px;
     border-radius: 5px;
-    border: 1px solid #ac5866;
+    border: 1px solid #58acac;
     cursor: pointer;
-    background-color: #ac5866;
+    background-color: #58ac7e;
     color: #fff
+}
+div{
+   text-align: center;
+   padding: 100px;
+   border: 10px solid #010a0a00;
+   margin: 100px;
+}
+button:hover{
+    opacity: 0.8;
+}
+button:active{
+    opacity: 0.6;
+}
+
+header{
+   text-align: center;
+
+
+    color: #080808;
+    margin: 100px;
+    border-radius: 10px;
+    border: 0.9px solid #bbb4b8;
+  
 }

@@ -4,15 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>for</title>
+    <title>Procurador de contatos</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="TH.png" type="image/x-icon">
 </head>
 
 <body>
-    <h1>procure o contato</h1>
-    <input placeholder="digite o nome do contato ">
-    <p></p>
-    <button onclick="procurar()">procurar</button>
+    <header>
+        <h1>Esses são os nomes de quem voce pode procurar o contato e a cidade</h1>
+
+        <ol>
+            <ol>Ana</ol>
+            <ol>Pedro</ol>
+            <ol>Maria</ol>
+            <ol>Lucas</ol>
+            <ol>Rafael</ol>
+            <ol>Gabriel</ol>
+            <ol>Joao</ol>
+            <ol>Jaime</ol>
+            <ol>Erik</ol>
+            <ol>Ana rosa</ol>
+        </ol>
+    </header>
+    <div>
+        <h1>Digite o nome e ache o telefone e a cidade</h1>
+        <input placeholder="Digite o nome da pessoa ">
+        <p></p>
+        <button onclick="procurar()">Procurar</button>
+    </div>
 
     <script>
         let p = document.querySelector('p')
@@ -21,58 +40,69 @@
         const nomes = [
             {
                 nome: 'joao',
-                telefone: '38998776754'
+                telefone: '38998776754',
+                cidade: 'sao paulo'
             },
             {
                 nome: 'maria',
-                telefone: '38998453213'
+                telefone: '38998453213',
+                cidade: 'rio de janeiro'
+
             },
             {
-                nome: 'pedro',
-                telefone: '21934564789'
+                nome: 'Pedro',
+                telefone: '21934564789',
+                cidade: 'Mogi das cruzes'
             },
             {
-                nome: 'ana',
-                telefone: '38991593226'
+                nome: 'Ana',
+                telefone: '38991593226',
+                cidade: 'Itacarambi'
             },
             {
-                nome: 'lucas',
-                telefone: '38999999999'
+                nome: 'Lucas',
+                telefone: '38999999999',
+                cidade: 'Januaria'
             },
-             {
-                nome: 'rafael',
-                telefone: '38998776754'
-             },
-              {
-                nome: 'gabriel',
-                telefone: '38998776754'
-              }, 
-              {
-                nome: 'jaime',
-                telefone: '38998776754'
-              }, 
-              {
-                nome:'pe de porco',
-                telefone: '38998776754'
-              },
-              {
-                nome:'ana rosa',
-                telefone: '38998776754'
-              }
+            {
+                nome: 'Rafael',
+                telefone: '38998776754',
+                cidade: 'Montes claros'
+            },
+            {
+                nome: 'Gabriel',
+                telefone: '38998776754',
+                cidade: 'Maria da cruz'
+            },
+            {
+                nome: 'Jaime',
+                telefone: '38998776754',
+                cidade: 'Sao jose dos campos'
+            },
+            {
+                nome: 'Erik',
+                telefone: '38998776754',
+                cidade: 'Recife'
+            },
+            {
+                nome: 'ana rosa',
+                telefone: '38998776754',
+                cidade: 'Fortaleza'
+            }
         ]
 
 
-       function procurar() {
-         for (const element of nomes) {
-            if(input.value.toLowerCase() == element.nome.toLowerCase()){
-                p.innerHTML = `Telefone de ${element.nome}: ${element.telefone}`;
-                break
+        function procurar() {
+            for (const element of nomes) {
+                if (input.value.toLowerCase() == element.nome.toLowerCase()) {
+                    p.innerHTML = `Telefone de ${element.nome}: ${element.telefone}:Cidade/ ${element.cidade}`;
+                    break
 
-            } else{
-                p.innerHTML = `nome não encontrado`;
+                } else {
+                    p.innerHTML = `Nome não encontrado`;
+                }
+
             }
-           
-         }
         }
 
 
