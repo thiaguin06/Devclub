@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jokenpo</title>
+    <title>Jokenpô</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagem/TH.png" type="image/x-icon">
 </head>
-<body>
-    <h1>jokenpo</h1>
 
-    <h2>sua pontuação</h2>
-    <h2>pontuação do computador:</h2>
+<body>
+    <div class="jok">
+        <h1>Jokenpô</h1>
+        <button class="mao" onclick="maoClicada('👊')">👊</button>
+        <button class="aberta" onclick="maoClicada('🖐')">🖐</button>
+        <button class="murro" onclick="maoClicada('✌️')">✌️</button>
+
+        <p>Sua pontuação: <span>0</span></p>
+        <p>Pontuação do computador: <span>0</span></p>
+    </div>
+
+
 </body>
+<script src="script.js"></script>
+
 </html>
+

@@ -1,10 +1,9 @@
-/*var c = 1
+/*var c = 1 
 do { // ele vai executar sem ver se e verdadeiro
     console.log(c)
     c++
-} while (c <= 6) // while ele ve se é verdadeiro pra executar
+} while (c <= 10) // while ele ve se é verdadeiro pra executar
 */
-
 const nome = [  {
     nome: 'joao',
     telefone: '38998776754'
@@ -30,4 +29,4 @@ nome.forEach((element, index,array) => { //O método .forEach() é usado para pe
     //no forEach ele nao funciona com o break ent no caso e mais facil usar o for of e o for normal
     console.log(index, element) 
     console.log(array)
-});
+}); 
