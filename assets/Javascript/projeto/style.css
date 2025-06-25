@@ -1,49 +1,120 @@
 @charset "UTF-8";
+
 /* CSS Document */
-*{
-    margin: 0;  
+* {
+    margin: 0;
     padding: 0;
 
 }
-body{
+body {
     background: url(imagem/images.png);
     background-repeat: no-repeat;
-    background-size: cover;  
- 
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
 }
-.jok{
-    margin-top: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-bottom: 50px;
+.maos {
+    text-align: center;
+    padding: 50px;
+
+
+}
+.mao,
+.aberta,
+.murro {
+    border: 1px solid rgb(230, 224, 224);
+    /* Define uma borda grossa para cada botão */
+    padding: 50px;
+    /* Adiciona espaço interno */
+    border-radius: 5px;
+    /* Adiciona bordas arredondadas (opcional) */
+    cursor: pointer;
+    margin: 20px;
+
+}
+.jok {
+
+    border-radius: 10px;
+    height: 40vh;
+    width: 50vh;
+    padding: 20px;
+}
+h1 {
     text-align: center;
 }
-.mao{
-    
-    width: 50px;
-    height: 100px;
+.mao {
+
     background-color: blueviolet;
-    border-radius: 7px;
-    
+    font-size: 20px;
+    color: white;
 }
-.aberta{
-    
-    width: 50px;
-    height: 100px;
+.aberta {
+
+    font-size: 20px;
     background-color: rgb(43, 255, 0);
-   border-radius: 7px;
+    color: black;
 }
-.murro{
-    
-    width: 50px;
-    height: 100px;
-    background-color: aqua;
-    border-radius: 7px;
+.murro {
+    background-color: rgb(255, 0, 0);
+    /* Vermelho */
+    font-size: 20px;
+    color: white;
 }
-    
-p{
+p {
     margin: 10px;
     font-size: 30px;
     padding: 10px;
+    text-align: center;
 }
+.murro:hover {
+    transform: scale(1.1);
+    /* Aumenta o tamanho do botão */
+    transition: transform 0.3s ease;
+    /* Suaviza o efeito */
+}
+.aberta:hover {
+    transform: scale(1.1);
+    /* Aumenta o tamanho do botão */
+    transition: transform 0.3s ease;
+    /* Suaviza o efeito */
+}
+.mao:hover {
+    transform: scale(1.1);
+    /* Aumenta o tamanho do botão */
+    transition: transform 0.3s ease;
+    /* Suaviza o efeito */
+}
+.reiniciar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    border: 1px solid rgb(230, 224, 224);
+    padding: 10px;
+    border-radius: 5px;
+    color: rgba(241, 187, 86, 0.753);
+   cursor: pointer;
+}
+.reiniciar:hover {
+    transform: scale(1.1);
+    /* Aumenta o tamanho do botão */
+    transition: transform 0.3s ease;
+    /* Suaviza o efeito */
+}
+@media (max-width: 768px) {
+    .maos {
+        padding: 20px;
+    }
 
+    .mao,
+    .aberta,
+    .murro {
+        font-size: 16px;
+        /* Reduz o tamanho dos emojis em telas menores */
+        padding: 30px;
+        /* Ajusta o espaço interno */
+    }
+}

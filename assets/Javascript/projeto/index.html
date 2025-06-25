@@ -12,12 +12,16 @@
 <body>
     <div class="jok">
         <h1>Jokenpô</h1>
-        <button class="mao" onclick="maoClicada('👊')">👊</button>
-        <button class="aberta" onclick="maoClicada('🖐')">🖐</button>
-        <button class="murro" onclick="maoClicada('✌️')">✌️</button>
+
+     <div class="maos">
+            <button class="mao" onclick="maoClicada('👊')">👊</button>
+            <button class="aberta" onclick="maoClicada('🖐')">🖐</button>
+            <button class="murro" onclick="maoClicada('✌️')">✌️</button>
+        </div>
 
         <p>Sua pontuação: <span id="pontuacao-jogador">0</span></p>
         <p>Pontuação do Bart: <span id="pontuacao-computador">0</span></p>
+        <button class="reiniciar" onclick="reiniciarJogo()">Reiniciar</button>
     </div>
 
 
