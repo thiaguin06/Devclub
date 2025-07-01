@@ -24,5 +24,5 @@ console.log(number) // mostra o array original que nao foi alterado*/
 
 
 const number = [110, 230, 34,412,321,123,100] 
-const multi = number.map(item => item * 2) // esse map ta simplificado diferente do anterior la de cima,ele nao precisa usar o return pois ele usando (=>) ele ja retorna o resultado. so que o primeiro usa o return que vai ser a mesma coisa.
+const multi = number.map(item => item / 2) // esse map ta simplificado diferente do anterior la de cima,ele nao precisa usar o return pois ele usando (=>) ele ja retorna o resultado. so que o primeiro usa o return que vai ser a mesma coisa.
 console.log(multi)
