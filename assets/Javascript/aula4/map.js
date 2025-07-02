@@ -35,9 +35,10 @@ const studand = [
 const estudantesAprovados =  studand.map(item => {
     const novo = {
         name: item.name,
-       status: item.nota >= 7 ? 'aprovado' : 'reprovado'
+       status: item.nota >= 5 ? 'aprovado' : 'reprovado'
         
     }
     return novo
 })
 console.log(estudantesAprovados)     
+     
