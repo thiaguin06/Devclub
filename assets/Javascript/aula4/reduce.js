@@ -13,4 +13,4 @@ const cart = [
 const sum = cart.reduce((acumulador, item) => {
     return acumulador + item.price * item.quantity
 }, 0)
-console.log(sum)
+console.log(sum)          
