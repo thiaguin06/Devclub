@@ -1,0 +1,80 @@
+1. O que são bibliotecas no Node?
+ Bibliotecas (ou módulos) são pacotes de código prontos que você pode usar no seu projeto para não precisar reescrever tudo do zero.
+Exemplo: express (servidor web), fs (sistema de arquivos), axios (requisições HTTP).
+
+2. Como importar no Node.js
+
+Existem duas formas principais, dependendo do tipo de projeto/configuração:
+
+🔹 CommonJS (o padrão antigo do Node)
+
+Aqui se usa o require().
+
+// Importando módulo nativo do Node
+const fs = require("fs");
+
+// Importando uma biblioteca externa instalada pelo npm
+const express = require("express");
+
+// Usando
+const app = express();
+
+
+👉 Esse é o mais comum em projetos Node “clássicos”.
+
+🔹 ES Modules (padrão mais novo, igual ao navegador)
+
+Aqui se usa import.
+
+// Importando biblioteca externa
+import express from "express";
+
+// Importando só uma função/objeto
+import { readFile } from "fs";
+
+// Usando
+const app = express();
+
+
+⚠️ Mas pra usar import no Node, você precisa:
+
+Ter "type": "module" no seu package.json, ou
+
+Usar arquivos com extensão .mjs em vez de .js.
+
+3. Diferença prática
+
+require() → carrega na hora da execução (dinâmico)
+
+import → é analisado antes da execução (estático)
+
+Por isso, import é melhor para tree-shaking e otimização, mas require ainda é muito usado.
+
+4. Exemplo rápido
+
+Digamos que você instalou o axios:
+
+npm install axios
+
+
+Se for CommonJS:
+
+const axios = require("axios");
+
+axios.get("https://api.github.com/users/thiaguin06")
+  .then(res => console.log(res.data));
+
+
+Se for ES Modules:
+
+import axios from "axios";
+
+const res = await axios.get("https://api.github.com/users/thiaguin06");
+console.log(res.data);
+
+
+👉 Resumindo:
+
+require = jeito antigo, ainda muito usado.
+
+import = jeito moderno, precisa configurar o projeto.

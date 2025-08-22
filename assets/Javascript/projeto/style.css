@@ -14,14 +14,15 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-
 }
-.maos {
-    text-align: center;
+.maos{
+    display: flex;
+    gap: 16px;
     padding: 50px;
-
-
 }
+
+
+
 .mao,
 .aberta,
 .murro {
