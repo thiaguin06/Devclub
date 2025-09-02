@@ -17,13 +17,12 @@ font-family: 'roboto', sans-serif;
  }
  main{
    width: 375px;
-   background: rgb(248, 248, 247);
+   background: rgb(16, 16, 10);
    border-radius: 20px;
    margin-left: auto;
    margin-right: auto;
    display: block;
    padding: 44px 24px 23px;
-  
  }
  label{
    color:#777777;

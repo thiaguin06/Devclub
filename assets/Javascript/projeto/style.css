@@ -2,120 +2,126 @@
 
 /* CSS Document */
 * {
-    margin: 0;
-    padding: 0;
-
+  margin: 0;
+  padding: 0;
 }
 body {
-    background: url(imagem/images.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  background: url(imagem/images.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
-.maos{
-    display: flex;
-    gap: 16px;
-    padding: 50px;
+.maos {
+  display: flex;
+  flex-direction: row; /* garante que seja em linha */
+  justify-content: center; /* centraliza horizontal */
+  align-items: center; /* centraliza vertical */
+  gap: 16px;
+  flex-wrap: nowrap; /* impede quebrar linha */
 }
 
-
+.container {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
 .mao,
 .aberta,
 .murro {
-    border: 1px solid rgb(230, 224, 224);
-    /* Define uma borda grossa para cada botão */
-    padding: 50px;
-    /* Adiciona espaço interno */
-    border-radius: 5px;
-    /* Adiciona bordas arredondadas (opcional) */
-    cursor: pointer;
-    margin: 20px;
-
+  border: 1px solid rgb(230, 224, 224);
+  /* Define uma borda grossa para cada botão */
+  padding: 50px;
+  /* Adiciona espaço interno */
+  border-radius: 5px;
+  /* Adiciona bordas arredondadas (opcional) */
+  cursor: pointer;
+  margin: 20px;
 }
 .jok {
-
-    border-radius: 10px;
-    height: 40vh;
-    width: 50vh;
-    padding: 20px;
+  border-radius: 10px;
+  height: 40vh;
+  width: 50vh;
+  padding: 20px;
 }
 h1 {
-    text-align: center;
+  text-align: center;
 }
 .mao {
-
-    background-color: blueviolet;
-    font-size: 20px;
-    color: white;
+  background-color: blueviolet;
+  font-size: 20px;
+  color: white;
 }
 .aberta {
-
-    font-size: 20px;
-    background-color: rgb(43, 255, 0);
-    color: black;
+  font-size: 20px;
+  background-color: rgb(43, 255, 0);
+  color: black;
 }
 .murro {
-    background-color: rgb(255, 0, 0);
-    /* Vermelho */
-    font-size: 20px;
-    color: white;
+  background-color: rgb(255, 0, 0);
+  /* Vermelho */
+  font-size: 20px;
+  color: white;
 }
 p {
-    margin: 10px;
-    font-size: 30px;
-    padding: 10px;
-    text-align: center;
+  margin: 10px;
+  font-size: 30px;
+  padding: 10px;
+  text-align: center;
 }
 .murro:hover {
-    transform: scale(1.1);
-    /* Aumenta o tamanho do botão */
-    transition: transform 0.3s ease;
-    /* Suaviza o efeito */
+  transform: scale(1.1);
+  /* Aumenta o tamanho do botão */
+  transition: transform 0.3s ease;
+  /* Suaviza o efeito */
 }
 .aberta:hover {
-    transform: scale(1.1);
-    /* Aumenta o tamanho do botão */
-    transition: transform 0.3s ease;
-    /* Suaviza o efeito */
+  transform: scale(1.1);
+  /* Aumenta o tamanho do botão */
+  transition: transform 0.3s ease;
+  /* Suaviza o efeito */
 }
 .mao:hover {
-    transform: scale(1.1);
-    /* Aumenta o tamanho do botão */
-    transition: transform 0.3s ease;
-    /* Suaviza o efeito */
+  transform: scale(1.1);
+  /* Aumenta o tamanho do botão */
+  transition: transform 0.3s ease;
+  /* Suaviza o efeito */
 }
 .reiniciar {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 20px;
-    border: 1px solid rgb(230, 224, 224);
-    padding: 10px;
-    border-radius: 5px;
-    color: rgba(241, 187, 86, 0.753);
-   cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  border: 1px solid rgb(230, 224, 224);
+  padding: 10px;
+  border-radius: 5px;
+  color: rgba(241, 187, 86, 0.753);
+  cursor: pointer;
 }
 .reiniciar:hover {
-    transform: scale(1.1);
-    /* Aumenta o tamanho do botão */
-    transition: transform 0.3s ease;
-    /* Suaviza o efeito */
+  transform: scale(1.1);
+  /* Aumenta o tamanho do botão */
+  transition: transform 0.3s ease;
+  /* Suaviza o efeito */
 }
 @media (max-width: 768px) {
-    .maos {
-        padding: 20px;
-    }
+  .maos {
+    padding: 20px;
+    flex-wrap: wrap; /* em celular pode quebrar a linha */
+    justify-content: center;
+  }
 
-    .mao,
-    .aberta,
-    .murro {
-        font-size: 16px;
-        /* Reduz o tamanho dos emojis em telas menores */
-        padding: 30px;
-        /* Ajusta o espaço interno */
-    }
+  .mao,
+  .aberta,
+  .murro {
+    font-size: 16px;
+    /* Reduz o tamanho dos emojis em telas menores */
+    padding: 30px;
+    /* Ajusta o espaço interno */
+  }
 }

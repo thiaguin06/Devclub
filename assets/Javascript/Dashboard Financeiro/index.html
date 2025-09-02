@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calc de finanças</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Calculadora de Gastos Mensais</h1>
+
+        <div>
+            <input type="text" id="name" placeholder="Nome">
+            <input type="number" id="value" placeholder="Valor">
+            <button class="add-btn" onclick="addExpense()">Adicionar despesa</button>
+        </div>
+
+        <h2>Despesas</h2>
+        <div id="expenses"></div>
+
+        <p>Total de gastos: <span id="total">R$0,00</span></p>
+        <p class="remaining">Orçamento restante: <span id="remaining">R$1000,00</span></p>
+    </div>
+
+
+</body>
+
+</html>
