@@ -1,0 +1,83 @@
+- OCNCEITOS SOBRE QUERY,ROUTE E BODY PARAMS EM NODE.JS 
+ 
+ 1. Query Params
+
+São enviados na URL, depois do ?.
+
+Usados geralmente para filtros, paginação ou buscas.
+
+Estrutura:
+
+http://localhost:3000/users?name=Thiago&age=22
+
+
+No código:
+
+import express from "express";
+
+const app = express();
+
+app.get("/users", (req, res) => {
+  const { name, age } = req.query; // vem como objeto
+  res.send(`Nome: ${name}, Idade: ${age}`);
+});
+
+app.listen(3000, () => console.log("Server rodando..."));
+
+
+👉 Aqui req.query retorna { name: "Thiago", age: "22" }.
+
+🔹 2. Route Params
+
+Fazem parte da rota em si.
+
+Muito usados para identificar um recurso específico (ex: buscar usuário pelo ID).
+
+Estrutura:
+
+http://localhost:3000/users/10
+
+
+No código:
+
+app.get("/users/:id", (req, res) => {
+  const { id } = req.params;
+  res.send(`Usuário com ID: ${id}`);
+});
+
+
+👉 Aqui req.params retorna { id: "10" }.
+
+🔹 3. Body Params
+
+São os dados enviados no corpo da requisição (geralmente em POST, PUT, PATCH).
+
+Usados quando você precisa enviar informações mais complexas (ex: criar um usuário com nome, email, senha).
+
+Estrutura (exemplo JSON):
+
+{
+  "name": "Thiago",
+  "email": "thiago@email.com"
+}
+
+
+No código:
+
+app.use(express.json()); // habilita JSON no body
+
+app.post("/users", (req, res) => {
+  const { name, email } = req.body;
+  res.send(`Usuário criado: ${name}, Email: ${email}`);
+});
+
+
+👉 Aqui req.body retorna { name: "Thiago", email: "thiago@email.com" }.
+
+Resumindo:
+
+Query Params (req.query) → ?chave=valor (ex: filtros/pesquisas).
+
+Route Params (req.params) → /rota/:id (ex: identificar recurso único).
+
+Body Params (req.body) → corpo da requisição (ex: criar/atualizar dados).
