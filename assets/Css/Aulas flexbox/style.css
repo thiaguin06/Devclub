@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+  
+    height: 100vh;
+    width: 100vh;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr   5fr 1fr;      
+
+
+}
+.cor1 {
+    background-color: #3498db;
+    font-size: 30px;
+    
+}
+
+.cor2 {
+    background-color: #2ecc71;
+     font-size: 30px;
+     
+}
+.cor3 {
+    background-color: #e74c3c;
+    font-size: 30px;
+    
+}
+.cor4 {
+    background-color: #9b59b6;
+    font-size: 30px
+}
+.cor5 {
+    background-color: #f1c40f;
+     font-size: 30px;
+   
+}
