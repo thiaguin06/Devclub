@@ -2,18 +2,16 @@ import styled from "styled-components";
 
 
 export const Container= styled.div`
-background: linear-gradient(120deg, #FFDEE9, #B5FFFC);
-
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:space-evenly;
-padding:20px;
-/* use min-height so content can grow on smaller screens without being clipped
-    and allow scrolling when content exceeds the viewport */
-min-height:100vh;
-width:100%;
-overflow-y:auto;
+	background: linear-gradient(120deg, #FFDEE9, #B5FFFC);
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+	padding:20px;
+	min-height:100vh;
+	width:100%;
+	overflow-y:auto;
+	gap: 24px;
 `
 
 
@@ -33,41 +31,63 @@ img{
 
 
 export const  Form = styled.form`
-display:flex;
-flex-direction:column;
-align-items:center;
-gap:20px;
-max-width:500px;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	gap:20px;
+	max-width:520px;
+	width: 90vw;
+	padding: 24px;
+	background: rgba(255,255,255,0.9);
+	border-radius: 16px;
+	box-shadow: 0 8px 24px rgba(0,0,0,0.12);
 `
 export const Title = styled.h2`
-color:#fff;
-text-align:center;
-font-size:34px;
-font-weight:700;
-font-style:normal;
+	color:#0f0606;
+	text-align:center;
+	font-size:28px;
+	font-weight:700;
+	margin: 0 0 8px 0;
+	letter-spacing: 0.3px;
 `
 export const ContainerInputs = styled.div`
-display:flex;
-gap:20px;
+	display:flex;
+	gap:16px;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
 `
 
 
 export const Input = styled.input`
-background-color:#fff;
-border: 1px solid #0f0606ff;
-outline:none;
-border-color: #FF6B00;
-border-radius:10px;
-width:100%;
-padding:10px;
+	background-color:#fff;
+	border: 2px solid #e0e0e0;
+	outline:none;
+	border-color: #FF6B00;
+	border-radius:12px;
+	width:100%;
+	padding:12px 14px;
+	font-size: 14px;
+	transition: all 0.2s ease;
+	&:focus {
+		border-color: #ff8b2b;
+		box-shadow: 0 0 0 3px rgba(255,139,43,0.1);
+	}
+	&::placeholder {
+		color: #999;
+	}
 `
 
 
 export const InputLabel = styled.label`
-color:#fff;
-font-size:15px;
-font-weight:500;
-span{
-    color: #f99603ff;
-    font-weight:700px; 
-}`
+	color:#0f0606;
+	font-size:14px;
+	font-weight:600;
+	margin-bottom: 6px;
+	display: block;
+	span{
+		color: #ff6b00;
+		font-weight:700;
+		margin-left: 2px;
+	}
+`

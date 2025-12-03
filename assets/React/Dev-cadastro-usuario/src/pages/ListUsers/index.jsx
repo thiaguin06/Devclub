@@ -1,13 +1,15 @@
 import api from "../../services/api";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "../../components/Button";
 import TopBackground from "../../components/TopBackground";
 import { Container } from "../Home/style";
 import Trash from '../../assets/trash.svg';
 import DefaultAvatar from '../../assets/users.png';
-import { PageHeading, Title, ContUser,AvatarImg, CardUser, TraImg } from "./style";
+import { PageHeading, Title, ContUser, AvatarImg, CardUser, TraImg, UserLeft, UserDetails } from "./style";
 function ListUsers() {
   const [users, setUsers] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function getUsers() {
@@ -18,6 +20,15 @@ function ListUsers() {
     }
     getUsers();
   }, []);
+
+  async function deleteUser(id) {
+    try {
+      await api.delete(`/usuarios/${id}`);
+      setUsers(users.filter(user => user.id !== id));
+    } catch (error) {
+      console.error("Erro ao deletar usuário:", error);
+    }
+  }
 
   return (
     <Container>
@@ -30,22 +41,23 @@ function ListUsers() {
       <ContUser>
         {users.map((user) => (        
           <CardUser key={user.id}>       
-
-          <AvatarImg
-            src={`https://avatar.iran.liara.run/public?username=${user.id}`}
-            alt={`avatar-${user.id}`}
-            onError={(e) => (e.currentTarget.src = DefaultAvatar)}
-          />
-          <div>
-            <p>{user.name}</p>
-            <p>{user.email}</p>
-            <p>{user.age}</p>
-          </div>
-          <TraImg  src={Trash} alt='lata de lixo' / >
+          <UserLeft>
+            <AvatarImg
+              src={`https://avatar.iran.liara.run/public?username=${user.id}`}
+              alt={`avatar-${user.id}`}
+              onError={(e) => (e.currentTarget.src = DefaultAvatar)}
+            />
+            <UserDetails>
+              <p className="name">{user.name}</p>
+              <p className="email">{user.email}</p>
+              <p className="age">{user.age}</p>
+            </UserDetails>
+          </UserLeft>
+          <TraImg src={Trash} alt='lata de lixo' onClick={() => deleteUser(user.id)} />
           </CardUser>
         ))}
       </ContUser>
-      <Button type="Button"> voltar </Button>
+      <Button type="button" onClick={() => navigate('/')}>voltar</Button>
     </Container>
   );
 }
