@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
@@ -6,6 +7,7 @@ const prisma = new PrismaClient();
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 app.get('/usuarios', async (req, res) => {
 const users =  await prisma.user.findMany()
 
@@ -19,13 +21,11 @@ app.post('/usuarios', async (req, res) => {
     email: req.body.email,
     age: req.body.age,
     name: req.body.name,
-  }
+  } 
 
 })
   res.status(201).json("Usuario criado com sucesso")
 })
-app.listen(3000);
-
 
 app.put('/usuarios/:id', async (req, res) => {  // essa rota ela atualiza o usuario pelo id, tem que criar uma rota put, coloca o id e atualizar o que voce quer fazer.
 
@@ -43,23 +43,23 @@ app.put('/usuarios/:id', async (req, res) => {  // essa rota ela atualiza o usua
   }
 
 })
-  res.status(201).json("Usuario criado com suceesso")
+  res.status(200).json("Atualização feita com sucesso")
 })
 
 
 
-app.delete('usuarios/:id', async (req,res) => {
+app.delete('/usuarios/:id', async (req,res) => {
   await prisma.user.delete ({
 where: {
   id:req.params.id 
 }
     
   })
-  req.status(200).json("Usuario deletado com sucesso")
+  res.status(200).json("Usuario deletado com sucesso")
 })
 
 app.listen(3000);
-
+ 
 
 
 

@@ -1,8 +1,9 @@
 @charset "UTF-8";
 *{
     margin: 0;
-    padding: 0;
-    
+    padding: 0;  
+  background-color:#fe7e5d;   
+
 }
 h1{
     font-family: Montserrat;
